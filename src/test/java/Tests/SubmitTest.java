@@ -38,4 +38,5 @@ public class SubmitTest extends BaseTest{
 
 	String name = "Diksha Kamdi";
 
+	String password="Test@123";
 }
