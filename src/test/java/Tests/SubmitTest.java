@@ -36,4 +36,6 @@ public class SubmitTest extends BaseTest{
 		return new Object[][] {{data.get(0)},{data.get(1)}};
 	}
 
+	String name = "Diksha Kamdi";
+
 }
