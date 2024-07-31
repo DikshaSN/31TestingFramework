@@ -28,14 +28,16 @@ public class CheckoutPage extends AbstractComponent{
 	@FindBy(css=".action__submit")
 	WebElement placeButton;
 	
-	public void selectCountry(String country) {
+	public void selectCountry(String country) throws InterruptedException {
 		Actions a = new Actions(driver);
 		a.sendKeys(tbox,country).build().perform();
+		Thread.sleep(2000);
 		WebElement India = countryList.stream().filter(s->s.getText().equalsIgnoreCase(country)).findFirst().orElse(null);
 		India.click();
 	}
 	
-	public void placeOrder() {
+	public void placeOrder() throws InterruptedException {
+		Thread.sleep(2000);
 		placeButton.click();
 	}
 }
